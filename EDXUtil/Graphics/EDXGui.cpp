@@ -36,7 +36,7 @@ namespace EDX
 			varying vec2 texCoord;
 			void main()
 			{
-				vec4 sample = 0.0f;
+				vec4 sample = vec4(0, 0, 0, 0);
 				for(int i = 0; i < 13; i++)
 				{
 					sample += weights[i] * texture2DLod(texSampler, texCoord + offsets[i], 2);
